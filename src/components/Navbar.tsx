@@ -7,9 +7,8 @@ import { Menu, X } from "lucide-react";
 import { portfolioData } from "@/lib/data";
 
 const navLinks = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Portfolio", href: "#projects" },
+  { name: "Skills", href: "/skills" },
+  { name: "Certifications", href: "/certifications" },
 ];
 
 export default function Navbar() {
@@ -26,59 +25,37 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#16171b]/90 backdrop-blur-md py-4 shadow-lg shadow-black/20" : "bg-transparent py-6"
-      }`}
-    >
+    <header className="fixed top-0 left-0 w-full z-50 bg-transparent py-6">
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold text-white flex items-center gap-2">
+        <Link href="/" className="text-2xl font-bold text-white flex items-center gap-2">
           <span className="text-blue-500 font-mono">{"</>"}</span> 
-          {hero.name}
+          M
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link, i) => (
-            <motion.div
-              key={link.name}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-            >
-              <Link
-                href={link.href}
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-              >
-                {link.name}
-              </Link>
-            </motion.div>
-          ))}
-          
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="flex items-center gap-1 text-sm font-medium text-gray-400 hover:text-white cursor-pointer transition-colors"
-          >
-            Pages <span className="text-xs">▼</span>
-          </motion.div>
+        {/* Center Text */}
+        <div className="absolute left-1/2 -translate-x-1/2 hidden md:block">
+          <a href={`mailto:${portfolioData.contact.email}`} className="text-white hover:text-blue-400 transition-colors font-mono tracking-widest text-sm uppercase">
+            Say Hello
+          </a>
+        </div>
 
-          <motion.button
-             initial={{ opacity: 0, y: -10 }}
-             animate={{ opacity: 1, y: 0 }}
-             transition={{ delay: 0.4 }}
-             className="text-gray-400 hover:text-white"
+        {/* Desktop Nav */}
+        <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 border border-[#0d6efd] text-[#0d6efd] rounded hover:bg-[#0d6efd]/10 transition-colors font-mono text-sm"
           >
-            <Menu size={24} />
-          </motion.button>
+            Resume
+          </a>
         </nav>
 
         {/* Mobile Nav Toggle */}
         <button
-          className="md:hidden text-gray-400 hover:text-white"
+          className="lg:hidden text-white hover:text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -91,18 +68,24 @@ export default function Navbar() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "100vh" }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-[#16171b] absolute top-full left-0 w-full flex flex-col items-center pt-12 space-y-8 h-screen"
+          className="lg:hidden bg-[#16171b] absolute top-full left-0 w-full flex flex-col items-center pt-12 space-y-8 h-screen"
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="text-2xl font-medium text-gray-400 hover:text-white transition-colors"
-            >
-              {link.name}
-            </Link>
-          ))}
+          <a
+            href={`mailto:${portfolioData.contact.email}`}
+            className="text-white hover:text-blue-400 font-mono text-lg transition-colors py-2"
+            onClick={() => setIsOpen(false)}
+          >
+            Say Hello
+          </a>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-blue-400 font-mono text-lg transition-colors py-2"
+            onClick={() => setIsOpen(false)}
+          >
+            Resume
+          </a>
         </motion.div>
       )}
     </header>

@@ -22,15 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
       <body className="antialiased min-h-screen flex flex-col relative selection:bg-primary/30 selection:text-white">
-        {/* Background Decorative Elements */}
-        <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px]" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-secondary/20 blur-[120px]" />
-        </div>
+
         
         <Navbar />
-        <main className="flex-grow pt-24">{children}</main>
-        <Footer />
+        <main className="flex-grow">{children}</main>
       </body>
     </html>
   );

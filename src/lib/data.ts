@@ -3,16 +3,24 @@ export const portfolioData = {
     greeting: "Hi, my name is",
     name: "Madhavan B",
     role: "Software & Data Engineer",
-    description: "I am an engineering student and developer passionate about building scalable web applications, data pipelines, and AI-powered tools. Currently pursuing my B.Tech in CSE at Sri Venkateshwaraa College of Engineering and Technology.",
+    description: "I’m a Software Engineer and recent graduate passionate about AI, software development, and building useful products.",
     resumeUrl: "#", // Add your resume PDF link here
   },
   about: {
     title: "About Me",
     content: [
-      "Hello! I'm Madhavan, a passionate software and data engineer from Puducherry. I enjoy creating robust applications that solve real-world problems. My experience spans across full-stack web development, backend engineering, and data warehousing.",
-      "Recently, I worked as a Data Engineer Intern at Decision Minds, where I contributed to both backend and frontend development, integrated enterprise platforms like Jira, and worked extensively with Snowflake for data warehousing.",
-      "I am constantly exploring new technologies and building projects like AI resume builders, trading automation bots, and image optimization platforms to push the boundaries of what I can create."
+      "I’m a Software Engineer and recent graduate passionate about AI, software development, and building useful products. I enjoy turning ideas into working applications and exploring new technologies.",
+      "I’ve worked with technologies like Python, PySpark, Databricks, Snowflake, RAG, LangChain, and LangGraph. I’m always learning, experimenting with AI tools, and building projects to improve my skills.",
+      "My goal is to grow as an AI Engineer and build products that are simple, useful, and impactful.",
+      "Looking to build something cool? Let’s talk."
     ],
+    education: {
+      degree: "Bachelor of Technology (B.Tech) in Computer Science and Engineering (CSE)",
+      school: "Sri Venkateshwaraa College of Engineering and Technology",
+      period: "Nov 2022 – Jun 2026",
+      location: "Puducherry",
+      score: "7.3/10"
+    },
     skills: [
       "Python",
       "JavaScript",
@@ -32,7 +40,9 @@ export const portfolioData = {
         "Worked on the backend development of an Alert Management Platform for an enterprise project.",
         "Integrated Jira with the Alert Management Platform to streamline issue tracking and operational workflows.",
         "Worked with Snowflake for data warehousing, SQL query development, data loading, and data management.",
+        "Assisted in the manual deployment of company applications across development and production environments.",
         "Contributed to frontend development by implementing UI enhancements and resolving bugs.",
+        "Generated and qualified business leads using AI-powered tools to support the company's sales and business development efforts.",
         "Collaborated with cross-functional teams to troubleshoot issues, improve system performance, and ensure successful project delivery."
       ]
     }

@@ -48,7 +48,7 @@ export default function ExperienceSection() {
                 className={`px-6 py-3 text-left font-mono text-sm whitespace-nowrap transition-all duration-200 relative z-10 md:h-12 border-b-2 md:border-b-0 md:border-l-2 border-transparent ${
                   activeTabId === exp.id
                     ? "text-primary border-primary md:border-transparent bg-primary/5"
-                    : "text-gray-400 hover:text-gray-200 hover:bg-gray-800/50"
+                    : "text-white hover:text-white hover:bg-gray-800/50"
                 }`}
               >
                 {exp.company}
@@ -69,10 +69,10 @@ export default function ExperienceSection() {
                   {activeExp.title}{" "}
                   <span className="text-primary">@ {activeExp.company}</span>
                 </h3>
-                <p className="font-mono text-sm text-gray-400 mb-6">{activeExp.period}</p>
+                <p className="font-mono text-sm text-white mb-6">{activeExp.period}</p>
                 <ul className="space-y-4">
                   {activeExp.description.map((desc, i) => (
-                    <li key={i} className="flex text-gray-400">
+                    <li key={i} className="flex text-white">
                       <span className="text-primary mr-3 mt-1.5 text-xs">▹</span>
                       <span className="leading-relaxed">{desc}</span>
                     </li>

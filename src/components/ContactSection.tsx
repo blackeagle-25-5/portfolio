@@ -21,7 +21,7 @@ export default function ContactSection() {
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
           {contact.title}
         </h2>
-        <p className="text-gray-400 text-lg mb-12 leading-relaxed">
+        <p className="text-white text-lg mb-12 leading-relaxed">
           {contact.message}
         </p>
         

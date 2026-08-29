@@ -1,23 +1,12 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { portfolioData } from "@/lib/data";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="py-8 text-center text-gray-400">
-      <div className="flex justify-center space-x-6 mb-4">
-        <a href={portfolioData.contact.github} className="hover:text-primary transition-colors" target="_blank" rel="noreferrer">
-          <FaGithub size={20} />
-        </a>
-        <a href={portfolioData.contact.linkedin} className="hover:text-primary transition-colors" target="_blank" rel="noreferrer">
-          <FaLinkedin size={20} />
-        </a>
-        <a href={portfolioData.contact.twitter} className="hover:text-primary transition-colors" target="_blank" rel="noreferrer">
-          <FaTwitter size={20} />
-        </a>
-      </div>
-      <p className="text-sm">
-        Designed & Built by <span className="text-primary">{portfolioData.hero.name}</span>
-      </p>
+    <footer className="py-8 flex justify-center items-center">
+      <Link href="/" className="text-xl font-bold text-white flex items-center gap-2 hover:opacity-80 transition-opacity">
+        <span className="text-blue-500 font-mono">{"</>"}</span> 
+        M
+      </Link>
     </footer>
   );
 }

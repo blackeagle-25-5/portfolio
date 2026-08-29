@@ -22,37 +22,33 @@ export default function AboutSection() {
           <div className="h-[1px] w-full max-w-md bg-gray-700"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
-          <div className="md:col-span-3 space-y-4 text-gray-400 leading-relaxed text-lg">
-            {about.content.map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
-            ))}
-
-            <p className="pt-4 text-white">Here are a few technologies I've been working with recently:</p>
-            <ul className="grid grid-cols-2 gap-2 mt-4 font-mono text-sm">
-              {about.skills.map((skill, i) => (
-                <li key={i} className="flex items-center text-gray-300 before:content-['▹'] before:text-primary before:mr-2">
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          <div className="md:col-span-2 relative group w-full max-w-sm mx-auto">
-            <div className="relative z-10 rounded-lg overflow-hidden glass aspect-square transition-all duration-300 group-hover:translate-x-[-8px] group-hover:translate-y-[-8px]">
-              <div className="absolute inset-0 bg-primary/20 mix-blend-multiply group-hover:bg-transparent transition-all duration-300 z-10" />
-              <img
-                src="/engineer_headshot.png"
-                alt="Alex Dev"
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = "https://via.placeholder.com/400x400/1e293b/0ea5e9?text=Alex+Dev";
-                }}
-              />
-            </div>
-            <div className="absolute inset-0 border-2 border-primary rounded-lg translate-x-5 translate-y-5 transition-all duration-300 group-hover:translate-x-3 group-hover:translate-y-3 -z-10"></div>
-          </div>
+        <div className="w-full max-w-3xl space-y-4 text-white leading-relaxed text-lg">
+          {about.content.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
         </div>
+
+        {/* Education Section */}
+        {about.education && (
+          <div className="mt-16 w-full max-w-3xl text-white">
+            <h3 className="text-xl font-bold mb-6 text-white/90">Education</h3>
+            <div className="bg-[#222] border border-white/10 p-6 rounded-lg relative hover:border-white/30 transition-colors shadow-lg">
+              <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                <div>
+                  <h4 className="text-lg font-bold text-white leading-tight">{about.education.degree}</h4>
+                  <p className="text-blue-400 font-mono text-sm mt-2">{about.education.school}</p>
+                </div>
+                <div className="text-left md:text-right font-mono text-sm text-white/60 shrink-0">
+                  <p>{about.education.period}</p>
+                  <p className="mt-1">{about.education.location}</p>
+                </div>
+              </div>
+              <div className="mt-5 pt-4 border-t border-white/10">
+                <p className="text-sm text-white/80"><span className="font-bold text-white">Score:</span> {about.education.score}</p>
+              </div>
+            </div>
+          </div>
+        )}
       </motion.div>
     </section>
   );
