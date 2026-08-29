@@ -11,13 +11,13 @@ export default function HeroSection() {
 
   return (
     <section id="hero" className="min-h-screen flex items-center relative overflow-hidden bg-[#16171b]">
-      {/* Background Image Container */}
-      <div className="absolute inset-0 z-0 flex justify-center items-end">
+      {/* Background Image Container (Desktop Only) */}
+      <div className="absolute inset-0 z-0 hidden lg:flex justify-center items-end">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="relative w-full max-w-[695px] h-[calc(92vh-25px)] -translate-x-[25px]"
+          className="relative w-full max-w-[695px] h-[calc(92vh-25px)] md:-translate-x-[25px]"
         >
           {/* Subtle glow behind the image to separate it from the dark background */}
           <div className="absolute inset-0 bg-white/5 blur-3xl rounded-full translate-y-1/4 scale-75"></div>
@@ -31,12 +31,12 @@ export default function HeroSection() {
           />
 
           {/* Left and Right Bottom Links */}
-          <div className="absolute bottom-12 -left-16 md:-left-32 z-30">
+          <div className="absolute bottom-12 left-4 md:-left-32 z-30">
             <Link href="/skills" className="text-white font-bold font-mono uppercase text-sm md:text-base flex items-center gap-2 transition-all hover:-translate-x-2 tracking-widest drop-shadow-lg">
               &larr; Skills
             </Link>
           </div>
-          <div className="absolute bottom-12 -right-12 md:-right-32 z-30">
+          <div className="absolute bottom-12 right-4 md:-right-32 z-30">
             <Link href="/certifications" className="text-white font-bold font-mono uppercase text-sm md:text-base flex items-center gap-2 transition-all hover:translate-x-2 tracking-widest drop-shadow-lg">
               Certifications &rarr;
             </Link>
@@ -44,10 +44,10 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+      <div className="container mx-auto px-6 md:px-12 pt-28 lg:pt-0 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center relative z-10 w-full">
         
-        {/* Left Column */}
-        <div className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1 relative z-20 mix-blend-difference md:mix-blend-normal">
+        {/* Left Column (Text) */}
+        <div className="lg:col-span-5 flex flex-col justify-center order-1 relative z-20 mix-blend-difference md:mix-blend-normal">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -70,8 +70,29 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Empty Center Column to let background image show */}
-        <div className="lg:col-span-3 hidden lg:block order-1 lg:order-2"></div>
+        {/* Mobile Image Container */}
+        <div className="w-full flex justify-center order-2 lg:hidden relative h-[45vh] mt-4 mb-8">
+           <img
+             src="/profile.png"
+             alt={hero.name}
+             onError={(e) => { e.currentTarget.style.display = 'none'; }}
+             className="h-full w-auto object-contain object-bottom drop-shadow-2xl pointer-events-none"
+           />
+           {/* Mobile Links */}
+           <div className="absolute bottom-4 left-0 z-30">
+             <Link href="/skills" className="text-white font-bold font-mono uppercase text-sm flex items-center gap-2 drop-shadow-lg bg-black/30 px-3 py-1 rounded-full backdrop-blur-sm">
+               &larr; Skills
+             </Link>
+           </div>
+           <div className="absolute bottom-4 right-0 z-30">
+             <Link href="/certifications" className="text-white font-bold font-mono uppercase text-sm flex items-center gap-2 drop-shadow-lg bg-black/30 px-3 py-1 rounded-full backdrop-blur-sm">
+               Certs &rarr;
+             </Link>
+           </div>
+        </div>
+
+        {/* Empty Center Column to let desktop background image show */}
+        <div className="lg:col-span-3 hidden lg:block order-2"></div>
 
         {/* Right Column */}
         <div className="lg:col-span-4 flex flex-col justify-center space-y-8 order-3 relative z-20 lg:pl-12">
