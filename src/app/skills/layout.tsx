@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SocialSidebar from "@/components/SocialSidebar";
 
 export const metadata: Metadata = {
   title: "Skills | Madhavan B",
@@ -10,5 +11,10 @@ export default function SkillsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <div className="relative">
+      <SocialSidebar />
+      {children}
+    </div>
+  );
 }

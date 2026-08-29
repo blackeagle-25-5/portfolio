@@ -136,11 +136,10 @@ export default function HeroSection() {
           >
             <h3 className="text-sm font-bold text-white tracking-widest uppercase mb-4 drop-shadow-md">Follow Me</h3>
             <div className="flex gap-4 text-white">
-              <a href={contact.github} className="hover:text-white transition-colors"><FaGithub size={18} /></a>
-              <a href={contact.linkedin} className="hover:text-white transition-colors"><FaLinkedin size={18} /></a>
-              <a href="#" className="hover:text-white transition-colors"><FaTwitter size={18} /></a>
-              <a href="#" className="hover:text-white transition-colors"><FaInstagram size={18} /></a>
-              <a href="#" className="hover:text-white transition-colors"><FaYoutube size={18} /></a>
+              <a href="https://github.com/blackeagle-25-5" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaGithub size={18} /></a>
+              <a href="https://www.linkedin.com/in/madhavan3" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaLinkedin size={18} /></a>
+              <a href="https://x.com/Madhava282004" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaTwitter size={18} /></a>
+              <a href="https://www.instagram.com/yalivox/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaInstagram size={18} /></a>
             </div>
           </motion.div>
         </div>

@@ -12,84 +12,36 @@ import "swiper/css";
 
 const projects = [
   {
-    title: "AI Customer Support",
-    tech: "#Python #LangChain #OpenAI",
-    desc: "A conversational AI support agent that handles customer inquiries with context-aware responses.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60",
-    link: "#",
-    github: "#"
+    title: "MinifyPic",
+    tech: "#Next.js #Tailwind #ImageOptimization",
+    desc: "A web application for compressing and optimizing images with high quality.",
+    image: "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?w=800&auto=format&fit=crop&q=60",
+    link: "https://minifypic.com",
+    github: ""
   },
   {
-    title: "E-Commerce Dashboard",
-    tech: "#Next.js #Tailwind #Prisma",
-    desc: "A full-stack admin dashboard for managing inventory, tracking sales, and analyzing customer data.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
-    link: "#",
-    github: "#"
+    title: "Yalivox Resume Builder",
+    tech: "#React #Next.js #Tailwind",
+    desc: "A professional resume builder with customizable templates and instant PDF generation.",
+    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&auto=format&fit=crop&q=60",
+    link: "https://yalivox.com",
+    github: ""
   },
   {
-    title: "Data Pipeline",
-    tech: "#PySpark #AWS #Snowflake",
-    desc: "A highly scalable financial data pipeline processing millions of transactions in real-time.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60",
-    link: "#",
-    github: "#"
+    title: "Angel One Algo Bot",
+    tech: "#Python #TradingAPI #AngelOne",
+    desc: "An automated options trading bot integrated with the Angel One platform for algorithmic trade execution.",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&auto=format&fit=crop&q=60",
+    link: "",
+    github: "https://github.com/blackeagle-25-5/alogbot2026"
   },
   {
-    title: "Real-time Chat",
-    tech: "#React #Socket.io #Node.js",
-    desc: "A low-latency messaging application with real-time presence and multimedia sharing.",
-    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop&q=60",
-    link: "#",
-    github: "#"
-  },
-  {
-    title: "Smart Home Hub",
-    tech: "#C++ #RaspberryPi #MQTT",
-    desc: "An IoT centralized controller bridging various smart home protocols into a single interface.",
-    image: "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=60",
-    link: "#",
-    github: "#"
-  },
-  {
-    title: "Crypto Tracker",
-    tech: "#Vue.js #Firebase #API",
-    desc: "A sleek cryptocurrency portfolio tracker with live market data and profit/loss analytics.",
-    image: "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=800&auto=format&fit=crop&q=60",
-    link: "#",
-    github: "#"
-  },
-  {
-    title: "Testing Framework",
-    tech: "#Selenium #Python #PyTest",
-    desc: "An automated end-to-end testing framework for continuous integration pipelines.",
-    image: "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?w=800&auto=format&fit=crop&q=60",
-    link: "#",
-    github: "#"
-  },
-  {
-    title: "Health Booking",
-    tech: "#Angular #SpringBoot #MySQL",
-    desc: "A secure medical appointment booking system with automated reminders and doctor schedules.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=60",
-    link: "#",
-    github: "#"
-  },
-  {
-    title: "ML Classifier",
-    tech: "#Scikit-Learn #Pandas",
-    desc: "A predictive machine learning model for identifying high-risk churn customers.",
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&auto=format&fit=crop&q=60",
-    link: "#",
-    github: "#"
-  },
-  {
-    title: "Social Analytics",
-    tech: "#React #D3.js #Express",
-    desc: "A visual dashboard for tracking brand sentiment and engagement across social platforms.",
-    image: "https://images.unsplash.com/photo-1432888116553-692bce649962?w=800&auto=format&fit=crop&q=60",
-    link: "#",
-    github: "#"
+    title: "Medicine Reminder",
+    tech: "#Flutter #Dart #MobileApp",
+    desc: "A mobile application designed to track and remind users to take their daily medications on time.",
+    image: "https://images.unsplash.com/photo-1584308666744-24d5e478ac5b?w=800&auto=format&fit=crop&q=60",
+    link: "",
+    github: "https://github.com/blackeagle-25-5/medicine_reminder"
   }
 ];
 
@@ -103,9 +55,9 @@ export default function ProjectsPage() {
       </h1>
 
       {/* Top Center Back Button */}
-      <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20">
-        <Link href="/" className="w-12 h-12 bg-white rounded-full flex justify-center items-center text-black hover:scale-105 transition-transform shadow-lg">
-          <ArrowLeft size={24} className="stroke-[3]" />
+      <div className="absolute md:fixed top-6 md:top-8 left-1/2 -translate-x-1/2 z-[250]">
+        <Link href="/" className="w-10 h-10 md:w-12 md:h-12 border border-white/30 rounded-full flex justify-center items-center text-white hover:bg-white/10 transition-colors duration-300 bg-white/5 backdrop-blur-sm">
+          <ArrowLeft size={20} strokeWidth={2.5} />
         </Link>
       </div>
 
@@ -169,12 +121,20 @@ export default function ProjectsPage() {
 
                         {/* Footer (Button + Icon) */}
                         <div className="flex items-center justify-between mt-4">
-                          <a href={project.link} className="bg-white text-black font-bold py-3 px-8 rounded-full rounded-br-none hover:bg-gray-200 transition-colors">
-                            Visit
-                          </a>
-                          <a href={project.github} className="text-white hover:text-gray-300 transition-colors">
-                            <FaGithub size={32} />
-                          </a>
+                          {project.link ? (
+                            <a href={project.link} className="bg-white text-black font-bold py-3 px-8 rounded-full rounded-br-none hover:bg-gray-200 transition-colors">
+                              Visit
+                            </a>
+                          ) : (
+                            <div></div>
+                          )}
+                          {project.github ? (
+                            <a href={project.github} className="text-white hover:text-gray-300 transition-colors">
+                              <FaGithub size={32} />
+                            </a>
+                          ) : (
+                            <div></div>
+                          )}
                         </div>
                       </div>
                     </div>

@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import ParticleNetwork from "@/components/ParticleNetwork";
 
 const certificates = [
@@ -40,7 +40,7 @@ const certificates = [
 
 export default function CertificationsPage() {
   return (
-    <div className="fixed inset-0 bg-[#16171b] z-[100] flex flex-col items-center overflow-x-hidden overflow-y-auto font-sans">
+    <div className="fixed inset-0 bg-[#16171b] z-[100] flex flex-col items-center overflow-x-hidden overflow-y-auto font-sans pl-16 md:pl-24">
       
       {/* Background Animation */}
       <ParticleNetwork />
@@ -52,10 +52,7 @@ export default function CertificationsPage() {
         </h1>
       </div>
 
-      {/* Top Left Logo */}
-      <div className="fixed top-6 md:top-8 left-6 md:left-8 z-50">
-        <span className="font-serif italic font-bold text-2xl md:text-3xl text-white">M</span>
-      </div>
+      
 
       {/* Top Center Back Button */}
       <div className="fixed top-6 md:top-8 left-1/2 -translate-x-1/2 z-50">
@@ -64,15 +61,7 @@ export default function CertificationsPage() {
         </Link>
       </div>
 
-      {/* Left Sidebar Socials (Desktop Only) */}
-      <div className="fixed left-8 top-1/2 -translate-y-1/2 flex flex-col items-center gap-6 z-50 hidden xl:flex">
-        <a href="#" className="text-white/70 hover:text-white transition-colors"><FaLinkedin size={22} /></a>
-        <a href="#" className="text-white/70 hover:text-white transition-colors"><FaGithub size={22} /></a>
-        <a href="#" className="text-white/70 hover:text-white transition-colors"><FaTwitter size={22} /></a>
-        <a href="#" className="text-white/70 hover:text-white transition-colors"><FaFacebook size={22} /></a>
-        <a href="#" className="text-white/70 hover:text-white transition-colors"><FaYoutube size={22} /></a>
-        <div className="w-[2px] h-24 bg-white/30 mt-2"></div>
-      </div>
+      
 
       {/* Main Content Grid */}
       <div className="relative z-10 w-full max-w-6xl mx-auto pt-32 pb-12 px-6 md:px-12 lg:px-24">
@@ -119,14 +108,7 @@ export default function CertificationsPage() {
           ))}
         </div>
 
-        {/* Mobile/Tablet Socials */}
-        <div className="flex xl:hidden justify-center items-center gap-6 mt-16 pb-8">
-          <a href="#" className="text-white/70 hover:text-white transition-colors"><FaLinkedin size={24} /></a>
-          <a href="#" className="text-white/70 hover:text-white transition-colors"><FaGithub size={24} /></a>
-          <a href="#" className="text-white/70 hover:text-white transition-colors"><FaTwitter size={24} /></a>
-          <a href="#" className="text-white/70 hover:text-white transition-colors"><FaFacebook size={24} /></a>
-          <a href="#" className="text-white/70 hover:text-white transition-colors"><FaYoutube size={24} /></a>
-        </div>
+        
       </div>
 
     </div>

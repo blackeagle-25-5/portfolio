@@ -19,7 +19,7 @@ export const portfolioData = {
       school: "Sri Venkateshwaraa College of Engineering and Technology",
       period: "Nov 2022 – Jun 2026",
       location: "Puducherry",
-      score: "7.3/10"
+      score: "7.6/10"
     },
     skills: [
       "Python",
@@ -91,6 +91,6 @@ export const portfolioData = {
     email: "madhavan200428@gmail.com",
     github: "https://github.com/blackeagle-25-5",
     linkedin: "https://www.linkedin.com/in/madhavan3",
-    twitter: "https://twitter.com" // You can remove this or update in Footer if you don't use Twitter
+    twitter: "https://x.com/Madhava282004"
   }
 };
