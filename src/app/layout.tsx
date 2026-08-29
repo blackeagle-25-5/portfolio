@@ -10,8 +10,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Dev | Software Engineer",
-  description: "Portfolio of Alex Dev, a passionate software engineer building modern digital experiences.",
+  title: "Madhavan B | Software & Data Engineer",
+  description: "Portfolio of Madhavan B, a Software & Data Engineer passionate about AI, software development, and building scalable products.",
+  keywords: ["Madhavan B", "Software Engineer", "Data Engineer", "Python", "React", "Next.js", "AI", "Portfolio"],
+  openGraph: {
+    title: "Madhavan B | Software & Data Engineer",
+    description: "Portfolio of Madhavan B, a Software & Data Engineer passionate about AI, software development, and building scalable products.",
+    type: "website",
+  }
 };
 
 export default function RootLayout({
